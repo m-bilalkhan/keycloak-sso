@@ -11,10 +11,10 @@ newgrp docker
 
 #Clone GitHub project
 #Setting it public for easy access
-git clone --depth=1 --filter=blob:none --sparse https://github.com/m-bilalkhan/your-repo.git
-cd your-repo
-git sparse-checkout set docker-app
-cd docker-app
+git clone --depth=1 --filter=blob:none --sparse https://github.com/m-bilalkhan/keycloak-sso.git
+cd keycloak-sso
+git sparse-checkout set services
+cd services
 
 
 docker-compose up --build -d

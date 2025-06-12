@@ -116,7 +116,7 @@ output "aws_ami_id" {
 }
 
 resource "aws_key_pair" "ssh-key" {
-  key_name = "server-key"
+  key_name = "dev-keycloak-sso"
   public_key = file(var.public_key_location)
 }
 
