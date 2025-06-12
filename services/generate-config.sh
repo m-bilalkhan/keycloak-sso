@@ -11,7 +11,7 @@ cat <<EOF > ./web-app/keycloak.json
   "realm": "demo-realm",
   "auth-server-url": "https://$PUBLIC_IP/",
   "resource": "node-client",
-  "ssl-required": "all-request",
+  "ssl-required": "all-requests",
   "public-client": true,
   "confidential-port": 0
 }
