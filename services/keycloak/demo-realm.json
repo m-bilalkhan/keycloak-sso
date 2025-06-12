@@ -1,0 +1,26 @@
+{
+  "realm": "demo-realm",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "node-client",
+      "publicClient": true,
+      "redirectUris": ["http://keycloak-sso-app:3000/*"],
+      "webOrigins": ["+"],
+      "protocol": "openid-connect"
+    }
+  ],
+  "users": [
+    {
+      "username": "testuser-1",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password",
+          "temporary": false
+        }
+      ]
+    }
+  ]
+}
