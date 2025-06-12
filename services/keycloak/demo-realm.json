@@ -5,7 +5,7 @@
     {
       "clientId": "node-client",
       "publicClient": true,
-      "redirectUris": ["https://PUBLIC_IP_ADDRESS/secure*"],
+      "redirectUris": ["https://PUBLIC_IP_ADDRESS/app/secure*"],
       "webOrigins": ["+"],
       "protocol": "openid-connect",
       "attributes": {
