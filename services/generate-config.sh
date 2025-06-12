@@ -9,7 +9,7 @@ echo "Public IP: $PUBLIC_IP"
 cat <<EOF > ./web-app/keycloak.json
 {
   "realm": "demo-realm",
-  "auth-server-url": "http://$PUBLIC_IP/auth",
+  "auth-server-url": "https://$PUBLIC_IP/auth",
   "resource": "node-client",
   "public-client": true,
   "confidential-port": 0
@@ -17,4 +17,4 @@ cat <<EOF > ./web-app/keycloak.json
 EOF
 
 # Also replace redirect URIs in demo-realm.json
-sed -i "s|http://PUBLIC_IP_ADDRESS|http://$PUBLIC_IP|g" ./keycloak/demo-realm.json
+sed -i "s|https://PUBLIC_IP_ADDRESS|https://$PUBLIC_IP|g" ./keycloak/demo-realm.json
