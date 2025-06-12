@@ -10,7 +10,8 @@
       "protocol": "openid-connect",
       "attributes": {
         "client.ssl.required": "all"
-      }
+      },
+      "baseUrl": "https://PUBLIC_IP_ADDRESS/app/secure"
     }
   ],
   "users": [

@@ -17,7 +17,7 @@ const keycloak = new Keycloak({ store: memoryStore });
 app.use(keycloak.middleware());
 
 app.get('/', (req, res) => {
-  res.send('<h1>Welcome to Single Sign-On by Keycloak</h1><a href="/secure">Go to Secure Page</a>');
+  res.send('<h1>Welcome to Single Sign-On by Keycloak</h1><a href="/app/secure">Go to Secure Page</a>');
 });
 
 app.get('/secure', keycloak.protect(), (req, res) => {
