@@ -16,5 +16,7 @@ cd keycloak-sso
 git sparse-checkout set services
 cd services
 
+chmod +x generate-config.sh
+./generate-config.sh
 
 docker-compose up --build -d
