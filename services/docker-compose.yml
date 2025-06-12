@@ -9,7 +9,7 @@ services:
     volumes:
       - ./keycloak:/opt/keycloak/data/import
     expose:
-      - "8080"
+      - "8443"
 
   app:
     container_name: keycloak-sso-app
