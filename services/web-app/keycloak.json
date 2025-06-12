@@ -1,0 +1,7 @@
+{
+  "realm": "demo-realm",
+  "auth-server-url": "https://keycloak:8080/auth/",
+  "resource": "node-client",
+  "public-client": true,
+  "confidential-port": 0
+}
