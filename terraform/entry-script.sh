@@ -16,8 +16,8 @@ cd keycloak-sso
 git sparse-checkout set services
 cd services
 
-#chmod +x generate-config.sh
-#./generate-config.sh
+chmod +x generate-config.sh
+./generate-config.sh
 
 #Adding a Self-Signed Certificate
 mkdir -p certs
