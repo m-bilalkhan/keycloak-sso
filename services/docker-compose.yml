@@ -8,13 +8,25 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: admin
     volumes:
       - ./keycloak:/opt/keycloak/data/import
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
 
   app:
     container_name: keycloak-sso-app
     build: ./web-app
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     depends_on:
       - keycloak
+
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      - keycloak
+      - app

@@ -5,11 +5,11 @@
     {
       "clientId": "node-client",
       "publicClient": true,
-      "redirectUris": ["http://PUBLIC_IP_ADDRESS:3000/*"],
+      "redirectUris": ["https://PUBLIC_IP_ADDRESS:3000/*"],
       "webOrigins": ["+"],
       "protocol": "openid-connect",
       "attributes": {
-        "client.ssl.required": "none"
+        "client.ssl.required": "all"
       }
     }
   ],

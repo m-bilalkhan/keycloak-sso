@@ -19,4 +19,10 @@ cd services
 chmod +x generate-config.sh
 ./generate-config.sh
 
+#Adding a Self-Signed Certificate
+mkdir -p certs
+openssl req -x509 -newkey rsa:4096 -nodes -keyout certs/key.pem -out certs/cert.pem -days 365 \
+  -subj "/C=US/ST=Test/L=Test/O=Test Company/CN=localhost"
+
+
 docker-compose up --build -d
