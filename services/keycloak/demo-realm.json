@@ -8,9 +8,6 @@
       "redirectUris": ["https://PUBLIC_IP_ADDRESS/app/secure"],
       "webOrigins": ["https://PUBLIC_IP_ADDRESS"],
       "protocol": "openid-connect",
-      "attributes": {
-        "client.ssl.required": "all"
-      },
       "baseUrl": "https://PUBLIC_IP_ADDRESS/app/secure"
     }
   ],
