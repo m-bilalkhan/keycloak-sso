@@ -6,12 +6,13 @@ PUBLIC_IP=$(curl -s http://checkip.amazonaws.com/)
 echo "Public IP: $PUBLIC_IP"
 
 # Create keycloak.json with correct IP
+#Important: Disabled client-side SSL enforcement for self-signed certs
 cat <<EOF > ./web-app/keycloak.json
 {
   "realm": "demo-realm",
   "auth-server-url": "https://$PUBLIC_IP/",
   "resource": "node-client",
-  "ssl-required": "all-requests",
+  "ssl-required": "none",             
   "public-client": true,
   "confidential-port": 0
 }
