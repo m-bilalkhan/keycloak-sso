@@ -18,15 +18,15 @@ app.set('trust proxy', true);
 
 const keycloak = new Keycloak({ store: memoryStore });
 
-app.use('app', keycloak.middleware());
+app.use(keycloak.middleware());
 
 // Public route
-app.get('/', (req, res) => {
+app.get('/app', (req, res) => {
   res.send('<h1>Welcome to SSO Demo</h1><a href="/app/secure">Go to Secure Page</a>');
 });
 
 // Protected route
-app.get('/secure', keycloak.protect(), (req, res) => {
+app.get('/app/secure', keycloak.protect(), (req, res) => {
   res.send('<h2>This is a secure page. Authenticated via Keycloak!</h2>');
 });
 
