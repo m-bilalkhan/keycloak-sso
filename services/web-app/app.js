@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 // Protected route
-app.get('/app/secure', keycloak.protect(), (req, res) => {
+app.get('/secure', keycloak.protect(), (req, res) => {
   res.send('<h2>This is a secure page. Authenticated via Keycloak!</h2>');
 });
 
