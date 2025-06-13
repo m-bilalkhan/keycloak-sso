@@ -6,6 +6,9 @@ services:
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_PROXY: edge
+      KC_HOSTNAME_STRICT: false
+      KC_HOSTNAME_STRICT_HTTPS: false
     volumes:
       - ./keycloak:/opt/keycloak/data/import
     expose:
