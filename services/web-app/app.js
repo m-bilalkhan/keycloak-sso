@@ -18,7 +18,7 @@ app.set('trust proxy', true);
 
 const keycloak = new Keycloak({ store: memoryStore });
 
-app.use('/app', keycloak.middleware());
+app.use(keycloak.middleware());
 
 // Public route
 app.get('/', (req, res) => {
